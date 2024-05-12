@@ -14,7 +14,7 @@ use App\Http\Controllers\ClienteController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::get('/clientes', [ClienteController::class, 'index']);
 Route::post('/cliente/create', [ClienteController::class, 'create']);
 Route::get('/cliente/{id}', [ClienteController::class, 'recover']);
 Route::get('/cliente/all', [ClienteController::class, 'recoverAll']);
