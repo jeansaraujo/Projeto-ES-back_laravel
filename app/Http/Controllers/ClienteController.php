@@ -22,6 +22,14 @@ class ClienteController extends Controller
         return response()->json($cliente);
     }
 
+    public function recoverAll()
+    {
+        $clientes = Cliente::all();
+        $ids = $clientes->pluck('id');
+        return response()->json($ids);
+    }
+
+
     public function update(Request $request)
     {
         $cliente = Cliente::find($request->id);
@@ -31,6 +39,7 @@ class ClienteController extends Controller
         $cliente->update($request->all());
         return response()->json($cliente);
     }
+    
 
     public function delete($id)
     {

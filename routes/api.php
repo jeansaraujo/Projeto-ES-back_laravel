@@ -17,6 +17,7 @@ use App\Http\Controllers\ClienteController;
 
 Route::post('/cliente/create', [ClienteController::class, 'create']);
 Route::get('/cliente/{id}', [ClienteController::class, 'recover']);
+Route::get('/cliente/all', [ClienteController::class, 'recoverAll']);
 Route::put('/cliente/update', [ClienteController::class, 'update']);
 Route::delete('/cliente/{id}', [ClienteController::class, 'delete']);
 
