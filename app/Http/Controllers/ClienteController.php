@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
+
+    public function index()
+    {
+        $clientes = Cliente::all();
+        return response()->json($clientes);
+    }
+
     public function create(Request $request)
     {
         $cliente = Cliente::create($request->all());
