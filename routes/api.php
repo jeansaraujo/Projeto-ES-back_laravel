@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,13 @@ Route::get('/cliente/all', [ClienteController::class, 'recoverAll']);
 Route::put('/cliente/update', [ClienteController::class, 'update']);
 Route::delete('/cliente/{id}', [ClienteController::class, 'delete']);
 
+Route::get('/usuarios', [UserController::class, 'index']);
+Route::post('/usuario/create', [UserController::class, 'create']);
+Route::get('/usuario/{id}', [UserController::class, 'recover']);
+Route::put('/usuario/update', [UserController::class, 'update']);
+Route::delete('/usuario/{id}', [UserController::class, 'delete']);
+
+Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
