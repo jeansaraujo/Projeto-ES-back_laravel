@@ -67,3 +67,22 @@ php artisan migrate
 ## Rodar API
 
 php artisan serve
+
+## Rotas para autenticação
+
+Usuarios
+GET
+'/usuarios'
+POST
+'/usuario/create'
+GET
+'/usuario/{id}'
+PUT
+'/usuario/update'
+DELETE
+'/usuario/{id}'
+
+## Rota para login
+
+GET
+'/login'
